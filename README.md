@@ -21,13 +21,20 @@ start and end sections of gcode are hardcodes as:
 
 --start-
 G21
+
 G90
+
 M3 S1000
+
 --------
 
+
 --end--
+
 G1 Z1.0
+
 M5
+
 -------
 
 Other:
