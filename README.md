@@ -1,5 +1,5 @@
 # CreoPost GRBL
-Creo postprocessor compatible with GRBL
+Creo CAM postprocessor compatible with GRBL
 
 move:
 
