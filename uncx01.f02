@@ -1,0 +1,38 @@
+$$ ****************************************************
+$$ *    Default Mill FIL file created by the OFG      *
+$$ ****************************************************
+
+$$  PRINT/OFF,IN                  $$ USE FOR PRODUCTION
+  PRINT/ON                      $$ USE FOR DEVELOPMENT
+  DMY = POSTF(24,1)             $$ USE FOR DEVELOPMENT
+
+$$ ****************************************************
+$$ *  G l o b a l   V a r i a b l e   S e c t i o n   *
+$$ ****************************************************
+
+   REDEF/ON                     $$ ALLOW VARAIBLES TO BE REDEFINED
+
+$$ THE FOLLOWING VARIABLES ARE DEFINED FOR USE WITH THE 
+$$ POSTN/ AND REPEAT/ COMMANDS.  THE USE SINGLE LETTER 
+$$ VARIABLES ANY WHERE ELSE IN FIL WILL REDEFINE THEM
+   A=1  ; B=2  ; C=3  ; D=4  ; E=5  ; F=6  ; G=7  ; H=8 
+   I=9  ; J=10 ; K=11 ; L=12 ; M=13 ; N=14 ; O=15 ; P=16 
+   Q=17 ; R=18 ; S=19 ; T=20 ; U=21 ; V=22 ; W=23 ;X=24
+   Y=25 ; Z=26
+
+$$ ****************************************************
+$$ *           M a c r o   S e c t i o n              *
+$$ ****************************************************
+
+
+$$ ****************************************************
+$$ *         C i m f i l    S e c t i o n s           *
+$$ ****************************************************
+
+
+$$ ****************************************************
+$$ *          E n d   O f   F I L   F i l e           *
+$$ ****************************************************
+
+FINI
+

@@ -1,0 +1,721 @@
+                     POSTPROCESSOR OVERVIEW
+
+
+This report documents all the data available in the Option File 
+Generator and puts it into a readable format.  Not only are the 
+values of the various fields included, but so are most of the 
+commons.
+
+
+1. General Information
+2. Machine Configuration
+3a. REPOS Information
+3b. Mill Turn
+4. MCD File Format
+5. File Formats
+6. Prep Codes
+7. Aux Codes
+8. Coolant Codes
+9. Linear Motion
+10. Rapid Motion
+11. Circular Motion
+12. Cycle Motion
+13. Curve Fitting
+14. Feedrate
+15. Cutter Comp
+16. Tool Change Sequence
+17. Fixture Offset
+18. Spindle Codes
+19. Dwell Parameters
+20. Operator Messages
+21. Start / End Program
+App A. FIL File
+
+
+******************** GENERAL INFORMATION **********************
+
+  MACHINE:        Mills without Rotary Axes  
+  OPTFILE NAME:   GRBL  
+  MACHINE NBR:    02  
+  FILE NAME:      uncx01.p02  
+  INPUT UNITS:    Same as NCL units  
+  OUTPUT UNITS:   Same as NCL units  
+  OPTFILE UNITS:  Metric  
+  FIL FILE:       c:\PTC\Creo 9.0.6.0\Parametric\bin\..\..\Common Files\x86e_win64\gpost\uncx01.f02  
+  AUTHOR:         vid  
+  COMPANY:
+  PHONE:            
+
+
+******************** MACHINE CONFIGURATION ********************
+
+  *** PRIMARY ROTARY AXIS ***
+
+  PRIMARY ROTARY AXIS:     NA                                (I-2078)
+  EIA STANDARD:            Yes                               (D-0652)
+  TOOL AXIS 0,0,1=0:       NA                                (I-2097)
+  FACES POS DIRECTION:     NA                                (D-0640)
+  CLW ALONG NORMAL:        No                                (D-0447)
+  DEFAULT DIR. CLW:        Yes                               (D-0445)
+  REPOS. C-AXIS TO 0:      NA                                (I-2094)
+  ROTARY RESOLUTION:       0.0010000                         (D-0446)
+  PIVOT DISTANCE:          NA                                (D-0635)
+  OUTPUT G0 / G1 CODES:    No                                (I-4657)
+  ONLY CAPABLE OF IND:     NA                                (I-2453)
+  MIN FEEDRATE:            0.0010000                         (D-0118)
+  MAX FEEDRATE:            200.0000000                       (D-0124)
+  FEEDRATE CALC:           NA                                (I-1895)
+  VELOCITY PERCENT:        NA                                (D-0088)
+  ROTARY AXIS TYPE:        0 & 359.99 ... +/- indicate dir   (I-2091)
+  RAPID RATE:              1400.0000000                      (D-0111)
+
+
+  *** SPECIFICATION ***
+
+  MANUAL SET RESOLUTION             	  No                                (I-2719)
+  MOTION MAX DEPARTURE:    NA                                (D-0079)
+  LINEAR RESOLUTION:       NA                                (D-0421)
+  ROTARY RESOLUTION:       NA                                (D-0446)
+  MOTION REGISTERS MODAL:  Yes                               (I-1918)
+  CL PTS IN MULTAX MODE:   Use previous tool axis            (I-1912)
+  0 TO 360 OUTPUT:         +/- 0 will output +/- 360         (I-2706)
+  IJK TOOLAXIS TOLERANCE:        0.0000000                         (D-0891)
+  ROUND TO ONE:            0.0000000                         (D-1122)
+  TOL DIFF FROM LAST:        0.0000000                         (D-1035)
+
+
+  *** AXES ***
+
+  LIMIT CHECK:             No                                (I-1849)
+
+
+ -- AXES --     -- HOME --        -- MINIMUM --       -- MAXIMUM --
+
+   X-Axis     10.00000 (D-130)
+   Y-Axis     10.00000 (D-131)
+   Z-Axis     30.00000 (D-132)
+
+
+  *** TRANSFORMATION ***
+
+  TRANSFORMATION TYPE:     Simple XYZ Translation            (I-2093)
+  X - AXIS TRANSLATION:    0.0000000                         (D-0286)
+  Y - AXIS TRANSLATION:    0.0000000                         (D-0287)
+  Z - AXIS TRANSLATION:    0.0000000                         (D-0288)
+         
+  OUTPUT (X-AXIS):         0.0000000                         (D-0775)
+  OUTPUT (Y-AXIS):         0.0000000                         (D-0776)
+  OUTPUT (Z-AXIS):         0.0000000                         (D-0777)
+  OUTPUT (A-AXIS):         0.0000000                         (D-0778)
+  OUTPUT (B-AXIS):         0.0000000                         (D-0779)
+  OUTPUT (C-AXIS):         0.0000000                         (D-0780)
+  DIST. ALONG TOOL AXIS:   0.0000000                         (D-0918)
+         
+  OUTPUT SCALE (X-AXIS):   1.0000000                         (D-0486)
+  OUTPUT SCALE (Y-AXIS):   1.0000000                         (D-0487)
+  OUTPUT SCALE (Z-AXIS):   1.0000000                         (D-0488)
+  OUTPUT SCALE (A-AXIS):   1.0000000                         (D-0489)
+  OUTPUT SCALE (B-AXIS):   1.0000000                         (D-0490)
+  OUTPUT SCALE (C-AXIS):   1.0000000                         (D-0491)
+
+
+*** RIGHT ANGLE ***
+
+  RT ANGLE HEAD OR HOLDER REQ'D:    No                                (I-4664)
+
+
+*** PLANAR MACHINING ***
+
+  ENABLE PLANAR MACHINING:          No                                (I-4687)
+
+
+  *** USER BLOCKS ***
+
+
+*********************** MILL-TURN **********************
+
+  *** GENERAL ***
+
+  MILL TURN:               NA                                
+
+
+******************* REPOS MOTION SETTING **********************
+
+  *** FEEDRATE MOTION ***    
+  FEEDRATE MOTION METHOD:  Call _REPOS macro                 I4344
+  WARNING MESSAGE OUTPUT:  NA                                I4345
+  RETRACT: DIST TOOLAXIS:  NA                                D1025
+  RETRACT: CUR/SPFY/RAP:   NA                                D1026
+  RETRACT: OUTPUT SPINDL:  NA                                I4346
+  RETRACT: OUTPUT OPSTOP:  NA                                I4348
+  RETRACT: OUTPUT COOLNT:  NA                                I4347
+  RETRACT: OUTPUT STOP:    NA                                I4349
+  RETRACT: SKIP ABC:       null  I4749
+  APPR: DIST TOOLAXIS:     NA                                D1064
+  APPR: CUR/SPFY/RAP:      NA                                D1027
+  APPR: OUTPUT SPINDL:     NA                                I4350
+  APPR: OUTPUT COOLNT:     NA                                I4351
+  RETRACT: SKIP LINTOL:    null  I4755
+  RETRACT: NEW TOOLAXIS:   null  4765
+  *** RADPID MOTION ***    
+  RAPID MOTION METHOD:     Call _REPOS macro                 I4341
+  WARNING MESSAGE OUTPUT:  NA                                I4342
+  RETRACT / APPR METHOD:   NA                                I4343
+  *** AXIS LIMIT ***    
+  A-AXIS LIMIT TYPE:       Linear range like XYZ             I4629
+  LINEAR RANGE MINIMUM:    0.0000000                         I595
+  LINEAR RANGE MAXIMUM:    null  I601
+  ROTARY RANGE 1 MINIMUM:   0.0000000                         I1046
+  ROTARY RANGE 1 MAXIMUM:   0.0000000                         I1049
+  ROTARY RANGE 2 MINIMUM:   0.0000000                         I1052
+  ROTARY RANGE 2 MAXIMUM:   0.0000000                         I1055
+  AXIS RESTRICTIONS:        No                                I4632
+  AXIS TRAVEL ZONE MIN:     NA                                D1058
+  AXIS TRAVEL ZONE MAX:     NA                                D1061
+  B-AXIS LIMIT TYPE:       Linear range like XYZ             I4630
+  LINEAR RANGE MINIMUM:    0.0000000                         I596
+  LINEAR RANGE MAXIMUM:    359.9990000                       I602
+  ROTARY RANGE 1 MINIMUM:   0.0000000                         I1047
+  ROTARY RANGE 1 MAXIMUM:   0.0000000                         I1050
+  ROTARY RANGE 2 MINIMUM:   0.0000000                         I1053
+  ROTARY RANGE 2 MAXIMUM:   0.0000000                         I1056
+  AXIS RESTRICTIONS:        No                                I4633
+  AXIS TRAVEL ZONE MIN:     NA                                D1059
+  AXIS TRAVEL ZONE MAX:     NA                                D1062
+  C-AXIS LIMIT TYPE:       NA                                I4631
+  LINEAR RANGE MINIMUM:    NA                                I597
+  LINEAR RANGE MAXIMUM:    NA                                I603
+  ROTARY RANGE 1 MINIMUM:   NA                                I1048
+  ROTARY RANGE 1 MAXIMUM:   NA                                I1051
+  ROTARY RANGE 2 MINIMUM:   NA                                I1054
+  ROTARY RANGE 2 MAXIMUM:   NA                                I1057
+  AXIS RESTRICTIONS:        NA                                I4634
+  AXIS TRAVEL ZONE MIN:     NA                                D1060
+  AXIS TRAVEL ZONE MAX:     NA                                D1063
+  *** CHECK XYZ AXES ***    
+  CHECK XYZ AXES REPOS:     No                                I4655
+  WHEN X-LIMIT EXCEEDED:   NA                                (I-4722)
+  WHEN Y-LIMIT EXCEEDED:   NA                                (I-4723)
+  WHEN Z-LIMIT EXCEEDED:   NA                                (I-4724)
+  *** OPTIMIZATION ***    
+  ENABLE OPTIMIZATION:       No                                I4704
+  REPOS GOT SEQUENCE TYPE:   NA                                I4705
+  START MAJOR WORD:          NA                                I4706
+  STOP MAJOR WORD:           NA                                I4707
+  START MINOR WORD:          NA                                I4744
+  STOP MINOR WORD:           NA                                I4745
+  PRINT/TRACE LOG TO LST:    NA                                I4708
+
+
+  *** RETRACT USER BLOCKS ***
+
+
+  *** APPROACH USER BLOCKS ***
+
+
+********************** MCD FILE FORMAT ************************   
+
+
+  BLANK BEFORE EA ADDR:    Yes                               (I-1831)
+  DECIMAL COUNT:           Output at least one zero          (I-4593)
+  FILE TYPE                gcode   (I-4600-7)
+  TAPE FILE CASE:          Default                           (I-4677)
+
+
+- ADDR -  - DESCRIPTION -   - ALIAS'S -  - FMT (In)# -  - INTCOMS ## -
+
+   N     Sequence Nbr  NONE/NONE   F4014, 106, 159
+   G     Prep Functions  NONE/NONE   F2007, 107, 160
+   X     X - Axis  NONE/NONE   F3424, 108, 161
+   Y     Y - Axis  NONE/NONE   F3425, 109, 162
+   Z     Z - Axis  NONE/NONE   F3426, 110, 163
+   I     X - Axis Arc  NONE/NONE   F3409, 111, 164
+   J     Y - Axis Arc  NONE/NONE   F3410, 112, 165
+   K     Z - Axis Arc  NONE/NONE   F3411, 113, 166
+   R     Cycle RAPID Stop  NONE/NONE   F3418, 114, 167
+   F     Feedrate  NONE/NONE   F3306, 119, 172
+   S     Spindle  NONE/NONE   F4019, 120, 173
+   T     Tool  NONE/NONE   F5020, 121, 174
+   D     Cutter Rad/Dia Comp  NONE/NONE   F2004, 122, 175
+   H     Tool Length Comp  NONE/NONE   F2008, 123, 176
+   M     Aux / M-Codes  NONE/NONE   F2013, 124, 177
+
+# - Fmt may include + sign, leading 0, number of characters before
+and after the decimal, decimal, and trailing 0
+
+## - Intcoms for Address, Format, & Spec respectively
+
+************************ FILE FORMATS *************************
+
+  *** LIST FILE FORMAT ***
+
+  VERIFICATION PRINT:      Don't generate verification prnt  (I-1832)
+  SUPPRESS ALL WARNINGS:   Yes                               (I-1836)
+  SUPPR MAJ WORD WARNING:  Yes                               (I-1850)
+  PAGE FORMATTING:         No                                (I-1834)
+  NBR OF LINES PER PAGE:   51                                (I-1988)
+  TAPE IMAGE:              Print formatted version           (I-1861)
+  IDENTIFY LINTOL BLOCKS:  No                                (I-2701)
+  INCL INPUT STMT IN LST:  No                                (I-1917)
+  SKIP FIL:     NA                                (I-4658)
+  SKIP PPRINT:     NA                                (I-4658)
+  SKIP INSERT:     NA                                (I-4658)
+  SKIP PARTNO:     NA                                (I-4658)
+
+
+  *** SEQUENCE NUMBERS ***
+
+  MAX SEQUENCE NUMBER:     9999.0000000                      (D-0478)
+  START SEQUENCE NUMBER:   1.0000000                         (##)
+  SEQUENCE NBR INCREMENT:  1.0000000                         (D-0477)
+  TURN OFF SEQ# AT START:  Yes                               (I-1508)
+  OUTPUT NBR EVERY n BLK:  0                                 (I-2007)
+  ALIGN BLK CODE & ALIAS:  O alias is O                      (I-1846)
+  OPSKIP CHAR & ALIAS:       alias is                        (I-1842)
+  OUTPUT SEQNO ON INSERT:  Yes                               (I-1860)
+  OUTPUT SEQNO ON PPRINT:  Yes                               (I-1860)
+
+
+## - value is obtained by adding Dblcoms 477 & 479
+
+  *** HTML PACKAGER ***
+
+  INCLUDE SOURCE FILE:              No                                (I-4680)
+  INCLUDE LST FILE:                 No                                (I-4680)
+  INCLUDE PUNCH FILE:               No                                (I-4680)
+  INCLUDE OPTION FILE:              No                                (I-4680)
+  INCLUDE FIL FILE:                 No                                (I-4680)
+
+
+  *** SIMULATION FILE ***
+
+  TIME & ABSOLUTE POSITION:         No time and absolute file needed  (I-4682)
+
+
+************************ PREP CODES ***************************
+
+  -- CODE --       --- DESCRIPTION ---
+
+     92             Axes Preset                              (I-0517)
+     20             Inch Mode                                (I-0506)
+     21             Metric Mode                              (I-0511)
+     90             Absolute Mode                            (I-0497)
+     91             Incremental Mode                         (I-0505)
+     NA             Cycle / Off                              (I-0500)
+     NA             Cycle / Drill                            (I-0470)
+     NA             Cycle / CSink                            (I-0471)
+     NA             Cycle / Deep                             (I-0472)
+     NA             Cycle / Tap                              (I-0473)
+     NA             Cycle / Bore                             (I-0474)
+     NA             Cycle / Ream                             (I-0475)
+     NA             Cycle / Thru                             (I-0476)
+     NA             Cycle / Face                             (I-0477)
+     NA             Cycle / Mill                             (I-0478)
+     NA             Cycle / Brkchp                           (I-0480)
+     01             Linear Interpolation                     (I-0510)
+     00             Rapid Motion Positioning XY              (I-0512)
+     00             Rapid Motion Positioning Z               (I-0513)
+     02             Circ Motion Clockwise                    (I-0499)
+     03             Circ Motion Counter Clockwise            (I-0498)
+     94             UPM Mode                                 (I-0508)
+     NA             UPR Mode                                 (I-0509)
+     93             Inverse Time Mode                        (I-0507)
+     54             Fixture Offset Minimum                   (I-3429)
+     59             Fixture Offset Maximum                   (I-3430)
+     54             Fixture Offset Default                   (I-3428)
+     04             Dwell Blocks                             (I-0504)
+     41             Cutcom / Left                            (I-0502)
+     42             Cutcom / Right                           (I-0503)
+     40             Cutcom / Off                             (I-0501)
+     00             Pulbac (Cycle Motion)                    (I-4336)
+     00             Pulbac Initial (Cycle Motion)            (I-4607)
+     00             Pulbac Full (Cycle Motion)               (I-4608)
+     00             Prim Rotart Axis Rotation                (I-0514)
+     17             Plane Selection XY                       (I-0523)
+     18             Plane Selection ZX                       (I-0525)
+     19             Plane Selection YZ                       (I-0524)
+     NA             Tool Chg Seq Tool Length                 (I-516)
+
+
+  CONT ACCEPT MULT CODES:  Yes                               (I-1864)
+  CYCLE TAP - HIGH      :  -3276.7                           (##)
+
+
+## - based on Intcoms 2714 and 2715
+
+************************ AUX CODES ****************************
+
+  -- CODE --       --- DESCRIPTION ---
+
+     00             Stop Code                                (I-1984)
+     01             OpStop Code                              (I-1969)
+     02             End Code                                 (I-1963)
+     30             Rewind Code                              (I-1980)
+     NA             Feedrate Enable Override                 (I-1965)
+     NA             Feedrate Disable Override                (I-1964)
+     NA             Spindle Clockwise                        (I-1982)
+     NA             Spindle Counter CW                       (I-1981)
+     NA             Spindle Default Rot                      (I-1513)
+     NA             Spindle Stop Code                        (I-1983)
+     NA             Spindle Orient Code                      (I-1970)
+     NA             Tool Change Seq                          (I-1966)
+
+
+  CONT ACCEPT MULT CODES:  Yes                               (I-1865)
+
+
+********************** COOLANT CODES **************************
+
+  -- CODE --       --- DESCRIPTION ---
+
+     NA             Coolant Mist                             (I-1960)
+     NA             Coolant Flood                            (I-1959)
+     NA             Flood High Pressure                      (I-3423)
+     NA             Flood Low Pressure                       (I-3424)
+     NA             Thru High Pressure                       (I-3421)
+     NA             Thru Low Pressure                        (I-3422)
+     NA             Coolant Default                          (I-1962)
+     NA             Coolant Off                              (I-1961)
+
+
+  OUTPUT TYPE:             On a block by itself              (I-3425)
+  OUTPUT COOLNT/OFF code   No                                (I-4662)
+
+
+*********************** LINEAR MOTION *************************
+
+  LINEAR PREP CODE:        1  (I-0510)
+  PREP-CODE IS MODAL:      No                                (I-4339)
+  OUTPUT METHOD:           Output XYZ in one block           (D-0636)
+  USE LINEARIZATION:       No                                (D-0636)
+  LINEARIZATION METHOD:    null  null
+  DISTANCE TOLERANCE:      null  null
+  VECTOR ANGLE TOLERANCE:        null  null
+  USE EQUAL NBR POINTS:    null  null
+  SINGULAR AXIS MOVE:      Allow singular axis move          (I-4762)
+
+
+*********************** RAPID MOTION **************************
+
+  PREP-CODE IS MODAL:      No                                (I-1922)
+  RAP TRAVERSE MIN DIST:   0.0000000                         (D-0425)
+  RAP TRAV FEED BELW MIN:  0.0000000                         (D-0426)
+  RAPID ADDRESS:           NONE                              (I-2073)
+  RAPID VALUE:             NA                                (D-0424)
+  POSITIONING VELOCITY:    200.0000000                       (D-0107)
+  OUTPUT REDUNDANT F-CDE:  Yes                               (I-1848)
+  FEEDRATE PREP CODE:      00                                (I-1862)
+  MOTION ANALYSIS:         XY rot then Z ... Z then XY rot   (I-1870)
+
+
+********************** CIRCULAR MOTION ************************
+
+  PREP-CODE IS MODAL:      No                                (I-2064)
+  XYZ CODES MODAL:         Yes                               (I-2065)
+  CIRCLE CENTER OUTPUT:    Output Radius                     (I-1924)
+  MAX DEGREES PER BLOCK:       360 deg. per block                (I-1923)
+  CORRECTION METHOD:       Don't correct CL pt not true arc  (I-1879)
+  MAXIMUM RADIUS:          999.9999000                       (D-0423)
+  CIRCLE Z DEVIATION TOL:  0.0000000                         (D-0917)
+  TRUE RAD FEEDRATE CALC:  No                                (I-1859)
+  OUTPUT F-CODE CIR BLKS:  No                                (I-3436)
+  SKIP 3-PTS TEST G2/G3:   No                                (I-4354)
+
+
+  *** RADIUS MODIFIER***
+
+  RADIUS ADDRESS:          R                                 (I-2067)
+  PREP-CODE IS MODAL:      No                                (I-2066)
+
+
+  *** PLANE SELECTION ***
+
+  CUTCOM PLANE:            Use G01 if cir/plane does not..   (I-4340)
+  MOVES +X TO +Y IS CCW:   Yes                               (I-2016)
+  MOVES +X TO +Z IS CCW:   Yes                               (I-2017)
+  MOVES +Y TO +Z IS CCW:   Yes                               (I-2018)
+  CIRCLE/cmd translation   No                                (I-2822)
+  null  null  null
+
+
+  *** ARCSLP ***
+
+  OUTPUT ARCSLP BLOCKS:    In radians absolute               (I-1877)
+  DIS K OUTPUT W/ ARCSLP:  Enable K Output                  (I-3435)
+  SKIP Z MOVE TEST CIR:    No                                (I-2717)
+  ARCSLP/ON, z INPUT CMD:  N/A  (I-4668)
+  SCALE ARCSLP BY TOOLAXIS:    No                                (I-4764)
+
+
+********************** CYCLE MOTION ***************************
+
+  OUTPUT TYPE:             Absolute Z                        (I-1871)
+  AUTO CLEARANCE VALUE:    0.0000000                         (D-0927)
+  CYCLE MOTION ANALAYSIS:  No                                (I-1874)
+  CYC MOTION DATA MODAL:   First cycle point                 ##
+  MODALITY TYPE(S):        Neither linear or rotary          ##
+  UNIGRAPHICS FORM:        FIL to process UG CY/cmd          (I-4660)
+  SIEMENS 840:             Not Required                      (I-4677)
+  SIEMENS ROT:             Do not output ROT cycle format   (I-4683)
+  CYCLE DEEP ADDRESS:      K                                 (I-0061)
+  CYCLE DWELL ADDRESS:       (I-0062)
+  CYCLE CAM ADDRESS:         (I-0063)
+  2ND CLEARANCE PLANE:     NONE                              (I-2482)
+  G98/G99 PULBAC AVAIL:    No                                (I-4316)
+  VALUE OF C2:             Incremental                      (I-4641)
+  OUTPUT G0 MOVE, APPR:    No                                (I-4684)
+  OUTPUT G0 MOVE, RETR:    No                                (I-4685)
+  POS Z-AXIS RETRACT:      Yes                               (D-488)
+  RETRACTING AXIS ADDR:    Z                                 (I-2206)
+  MULTAX MODE CYCLE:       Same as 3-axis mode               (I-4594)
+  XY PLANE (0,0,1):        NA                                (I-4595)
+  ZX PLANE (0,1,0):        NA                                (I-4596)
+  YZ PLANE (1,0,0):        NA                                (I-4597)
+  XYZ PLANE (all):         NA                                (I-4598)
+
+
+  ## - Intcoms 4635 and 4337
+
+  *** PULBAC ***
+
+  G98/G99 PULBAC AVAIL:    No                                (I-4316)
+  G-CODE:                  G-Code from Cycle command         (I-4336)
+  G-CODE IS MODAL          Yes                               (I-4674)
+
+
+********************** CURVE FITTING **************************
+
+  ENABLE CURVE FITTING:    NA                                
+
+
+************************* FEEDRATE ****************************
+
+  *** GENERAL ***
+
+  OUTPUT CODE MOTION BLK:  Yes                               (I-0532)
+  OUTPUT F-CD MOTION BLK:  No                                (I-1911)
+  VER PRINT IN LIST FILE:  NA                                (I-4659)
+
+
+  *** UPM ***
+
+  UPM MINIMUM:             0.0010000                         (D-0114)
+  UPM MAXIMUM:             1000.0000000                      (D-0120)
+  UPM MULITPLIER:          1.0000000                         (D-0743)
+  INCH FORMAT:             F33  (I-0620)
+  METRIC FORMAT:           F42  (I-0620)
+  OUPUT UPM FOR GOTO/xyz   No                                (I-2095)
+
+
+  *** UPR ***
+
+  NA                                  
+
+
+  *** INVERSE TIME ***
+
+  INVERSE TIME MINIMUM:    0.0010000                         (D-0105)
+  INVERSE TIME MAXIMUM:    200.0000000                       (D-0106)
+  INVERSE TIME FEEDRATE:   Use circle arc length             (I-1863)
+  INV TIME MULITPLIER:     1.0000000                         (D-0745)
+  OUTPUT INV TM FEEDRATE:  No                                (I-2095)
+  MIN TIME INV TIME MOVE:  0.0000000                         (D-0887)
+  ID CORRECTED BLKS LIST:  NA                                (I-2703)
+  INV TIME CALULATION:     Use iterative method              (I-1878)
+  INCH FORMAT:             F33  (I-0540)
+  METRIC FORMAT:           F42  (I-0540)
+
+
+********************** CUTTER COMP ****************************
+
+  PQ VECTS ON CUTCOM BLK:  No                                (I-2476)
+  OUTPUT W/ XY MOTION BK:  No                                (#)
+  OUT SIN/COS LT/RT BLKS:  No                                (I-1941)
+  OUTPUT TOOL NBR AS DIA:  No                                (I-4314)
+  DIA OFFSET ADDRESS:      D                                 (I-0858)
+
+
+# - value is based on Intcom 2708 and 4358
+
+  *** 5-Axis Mills ***
+
+  PQ VECTS ON CUTCOM BLK:  No                                (I-4356)
+
+
+********************** TOOL CHANGE SEQ **************************
+
+  TOOL CHANGE TIME:        0.0000000                         (D-0481)
+  CYCLE TIME OUTPUT:       Do not output tool times to list  (I-1866)
+  T-CODE IS MODAL:         No                                (I-4318)
+  IGNORE TOOL LENGTH:      No                                (I-4700)
+  T&M CODES ON SEP. LINE:  No                                (I-3437)
+  TOOL NBR AS LEN OFFSET:  No                                (I-4313)
+  OUTPUT TOOL PRESELECT:   No                                (I-4315)
+  TOOL CHNG POSITIONING:   Do not output tool chng pos blk   (I-1872)
+
+
+  *** COORDINATES ***
+
+  X - COORDINATE:          Current X                  (D-0604)
+  Y - COORDINATE:          Current Y                  (D-0605)
+  Z - COORDINATE:          30.0000000                        (D-0606)
+  A - COORDINATE:          NA                                (D-0607)
+  B - COORDINATE:          NA                                (D-0608)
+  C - COORDINATE:          NA                                (D-0609)
+  MOTION ANALYSIS OPTION:  Use tool change location          (I-4663)
+
+
+  *** USER BLOCKS ***
+
+
+********************* FIXTURE OFFSET **************************
+
+  OUTPUT TYPE:             On a block by itself              (I-3431)
+  OFFSET ADDRESS:          H                                 (I-0496)
+  BASE VALUE TO ADD:       0                                 (I-3434)
+
+
+********************** SPINDLE CODES **************************
+
+  *** GENERAL ***
+
+  DIRECT RPM:              Yes                               (I-0483)
+  NBR OF SPINDLE RANGES:   1                                 (I-2006)
+  NBR OF DEFAULT RANGES:   1                                 (I-1523)
+  OUTPUT TYPE:             On a block by iteself    (I-4641)
+  RANGE #1:                NA                                (I-1973)
+
+
+  *** DIRECT RPM ***
+
+  -- RANGE --  -- MIN SPEED --        -- MAX SPEED --
+ 
+      1        1.0000000 (R-11)       3000.0000000 (R-17)
+
+********************* DWELL PARAMETERS **************************
+
+  *** CYCLE DWELL ***
+
+  DWELL REGISTER ADDRESS:  F                                 (I-0487)
+  UPM MIN TIME:            0.1000000                         (D-0084)
+  UPM MAX TIME:            99.9900000                        (D-0086)
+  UPM DWELL MULT:          0.0000000                         (D-0980)
+  UPR MIN TIME:            0.0000000                         (D-0085)
+  UPR MAX TIME:            0.0000000                         (D-0087)
+  UPR DWELL MULT:          0.0000000                         (D-0981)
+  UPM INCH FORMAT:         F00  (I-0486)
+  UPM METRIC FORMAT:       F00  (I-0486)
+  UPR INCH FORMAT:         null  (I-0485)
+  UPR METRIC FORMAT:       null  (I-0485)
+
+
+  *** CYCLE DWELL ***
+
+  CYCLE DRILL:             0.0000000                         (D-0055)
+  CYCLE CSINK:             2.0000000                         (D-0056)
+  CYCLE DEEP:              0.0000000                         (D-0057)
+  CYCLE TAP:               2.0000000                         (D-0058)
+  CYCLE BORE:              2.0000000                         (D-0059)
+  CYCLE REAM:              0.0000000                         (D-0060)
+  CYCLE THRU:              0.0000000                         (D-0061)
+  CYCLE FACE:              2.0000000                         (D-0062)
+  CYCLE BRKCHP:            0.0000000                         (D-0063)
+  MODALITY                 Modal  (I-4748)
+
+
+******************** OPERATOR MESSAGES *************************
+
+  CNTRL-OUT CODE & ALIAS:  ( alias is (                      (I-1844)
+  CNTRL-IN CODE & ALIAS:   ) alias is )                      (I-1845)
+  MAX CHARACTERS PER BLK:  120                               (I-0615)
+  OUTPUT MSG TAPE FILE:    No                                (I-0484)
+  RETAIN SPACE IN INSERT:  No                                (I-1869)
+  CONTINUATION CHARACTER:                                    (I-1951)
+
+
+********************** START / END ****************************
+
+  DNC FORMAT:              Yes                               (I-2479)
+  UNITS OF LEADER:         NA                                (D-0430)
+  LEADER CODE & ALIAS:     NA                                (I-1840)
+  UNITS OF TRAILER:        NA                                (D-0429)
+  TAPE READABLE PARTNO:    NA                                (I-1925)
+  MAN READABLE PARTNO:     NA                                (I-1837)
+  EOB AT END EA BLK TAPE:  No                                (I-1847)
+  EOB CODE:                $ alias is $                      (I-1839)
+  TIME STAMP:              No                                (I-3941)
+  MERGING POST:            No                                (I-1868)
+  _MCDWT / _LSTWT MACRO:   NONE                              (I-1920)
+  STOP CODE & ALIAS:       NA                                (I-1841)
+  START CODE:              NA                                (I-1929)
+  _OUTPUT TO EDIT MDC BK:  No                                (I-4667)
+
+
+  *** CODES ***
+
+  INCH / METRIC MODE:      20                                (I-0506)
+  OUTPUT INCH/METR CODE:   NA                                (#)
+  ABS / INCREMENTAL MODE:  90                                (I-0534)
+  OUTPUT ABS/INCR CODE:    NA                                (##)
+  FEEDRATE MODE:           94                                (I-0492)
+  OUTPUT FEEDRATE CODE:    NA                                (###)
+  CIRC INTERP PLANE:       17                                (I-0618)
+  OUTPUT CIR INTERP CODE:  NA                                (####)
+
+
+# - based on Intcoms 1833, 506, & 511
+## - based on Intcoms 534 & 535
+### - based on Intcoms 492 & 493
+#### - based on Intcoms 618 & 619
+
+  *** STARTUP BLOCKS ***
+
+
+
+# - Obtained from an array of Intcoms
+
+  *** MERGE POSTS ***
+
+************************ FIL FILE ***********************
+
+
+$$ ****************************************************
+$$ *    Default Mill FIL file created by the OFG      *
+$$ ****************************************************
+
+$$  PRINT/OFF,IN                  $$ USE FOR PRODUCTION
+  PRINT/ON                      $$ USE FOR DEVELOPMENT
+  DMY = POSTF(24,1)             $$ USE FOR DEVELOPMENT
+
+$$ ****************************************************
+$$ *  G l o b a l   V a r i a b l e   S e c t i o n   *
+$$ ****************************************************
+
+   REDEF/ON                     $$ ALLOW VARAIBLES TO BE REDEFINED
+
+$$ THE FOLLOWING VARIABLES ARE DEFINED FOR USE WITH THE 
+$$ POSTN/ AND REPEAT/ COMMANDS.  THE USE SINGLE LETTER 
+$$ VARIABLES ANY WHERE ELSE IN FIL WILL REDEFINE THEM
+   A=1  ; B=2  ; C=3  ; D=4  ; E=5  ; F=6  ; G=7  ; H=8 
+   I=9  ; J=10 ; K=11 ; L=12 ; M=13 ; N=14 ; O=15 ; P=16 
+   Q=17 ; R=18 ; S=19 ; T=20 ; U=21 ; V=22 ; W=23 ;X=24
+   Y=25 ; Z=26
+
+$$ ****************************************************
+$$ *           M a c r o   S e c t i o n              *
+$$ ****************************************************
+
+
+$$ ****************************************************
+$$ *         C i m f i l    S e c t i o n s           *
+$$ ****************************************************
+
+
+$$ ****************************************************
+$$ *          E n d   O f   F I L   F i l e           *
+$$ ****************************************************
+
+FINI
+
+
+*********************** END OF DOCUMENT ***********************
